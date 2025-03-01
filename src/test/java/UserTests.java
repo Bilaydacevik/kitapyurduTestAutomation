@@ -30,6 +30,8 @@ public class UserTests {
         driver.findElement(By.className("ky-checkbox-input")).click();
         driver.findElement(By.cssSelector(".ky-btn.ky-btn-orange.w-100.ky-login-btn")).click();
         System.out.println(driver.findElement(By.cssSelector("ky-error")).getText());
+        Assert.assertEquals((driver.findElement(By.cssSelector("ky-error")).getText()),"");
+        driver.quit();
 
 
     }
